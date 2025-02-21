@@ -67,7 +67,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1>23bcs9=80093</h1> 
+            <h1>23BCS80093</h1> 
             <form onSubmit={handleSubmit}>
                 <textarea
                     value={input}
