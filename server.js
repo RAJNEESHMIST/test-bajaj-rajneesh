@@ -9,9 +9,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Example user details
-const userId = "john_doe_17091999"; // Example user ID
-const email = "john@xyz.com"; // Example email
-const rollNumber = "ABCD123"; // Example roll number
+const userId = "Rajneesh299"; // Example user ID
+const email = "rajneeshv525@gmail.com"; // Example email
+const rollNumber = "23BCS80093"; // Example roll number
 
 // POST endpoint
 app.post('/bfhl', (req, res) => {
