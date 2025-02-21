@@ -27,7 +27,7 @@ function App() {
                 throw new Error("Invalid input structure. 'data' should be an array.");
             }
             // Call the backend API
-            const res = await axios.post('https://testbfhl.herokuapp.com/bfhl', jsonData);
+            const res = await axios.post('http://localhost:3001/bfhl', jsonData);
             setResponse(res.data);
             setShowResponse(true);
         } catch (err) {
