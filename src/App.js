@@ -20,12 +20,20 @@ function App() {
         setResponse(null);
 
         try {
+            // Attempt to parse the input as JSON
             const jsonData = JSON.parse(input);
+            // Make sure the input has the correct structure
+            if (!jsonData.data || !Array.isArray(jsonData.data)) {
+                throw new Error("Invalid input structure. 'data' should be an array.");
+            }
+            // Call the backend API
             const res = await axios.post('https://testbfhl.herokuapp.com/bfhl', jsonData);
             setResponse(res.data);
             setShowResponse(true);
         } catch (err) {
+            // Handle JSON parsing errors and other errors
             setError('Invalid JSON format. Please enter valid JSON.');
+            console.error("Error:", err); // Log the error for debugging
         }
     };
 
@@ -67,7 +75,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1>23BCS80093</h1> 
+            <h1>23BCS80093</h1> {/* Replace with your roll number */}
             <form onSubmit={handleSubmit}>
                 <textarea
                     value={input}
